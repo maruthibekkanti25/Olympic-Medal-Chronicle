@@ -1,0 +1,14 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+body{
+  background: url('https://th.bing.com/th/id/OIF.Fbc133jbOJpvfeUytKH4OQ?rs=1&pid=ImgDetMain') no-repeat center center fixed;
+  background-size: cover;
+}

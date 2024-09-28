@@ -1,0 +1,10 @@
+.event-header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .event-header h1{
+    color: white;
+  }

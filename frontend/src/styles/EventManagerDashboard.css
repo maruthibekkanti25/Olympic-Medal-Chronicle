@@ -1,0 +1,41 @@
+.event-dashboard-container {
+    text-align: center;
+    padding-top: 50px;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .event-welcome-message {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .event-info-message {
+    font-size:34px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .event-logout-button {
+    position: absolute;
+    top:60px;
+    right:500px;
+    padding: 12px 25px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .event-logout-button:hover {
+    background-color: #c9302c;
+  }
+  

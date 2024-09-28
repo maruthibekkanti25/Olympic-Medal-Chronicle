@@ -1,0 +1,133 @@
+.athlete-list {
+  padding: 50px;
+  font-family: 'Poppins', sans-serif;
+  background: url('https://th.bing.com/th/id/OIF.Fbc133jbOJpvfeUytKH4OQ?rs=1&pid=ImgDetMain') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  color: #f0f0f0; /* Match the light color for text */
+  overflow: hidden;
+}
+
+.athlete-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Slightly darker for better contrast */
+  z-index: -1;
+  backdrop-filter: blur(5px); /* Adjusted to a stronger blur */
+}
+
+.athlete-list h1 {
+  font-size: 4rem;
+  color: #ffffff; /* Using a green accent color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  animation: fadeInFromTop 1.5s ease-in-out forwards;
+}
+
+.athlete-list .search-input {
+  width: 40%;
+  padding: 10px 15px;
+  margin-bottom: 40px;
+  border: 3px solid #ffffff; /* Match sportwise accent color */
+  border-radius: 25px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.2); /* Darker transparent background */
+  transition: all 0.3s ease;
+  margin-left: -10px !important;
+}
+
+.athlete-list .search-input::placeholder {
+  color: #ffffff !important;
+
+}
+
+.athlete-list .search-input:focus {
+  border-color: #008c72; /* Darker shade of the primary accent */
+  outline: none;
+  background: rgba(20, 20, 20, 0.9); /* Focused background transparency */
+}
+
+.athlete-container {
+  display: flex;
+  flex-direction: column; /* Makes each card a full row */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.athlete-card {
+  background: rgba(255, 255, 255, 0.05); /* Increased transparency */
+  backdrop-filter: blur(8px); /* Slightly stronger blur for contrast */
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Darker shadow for better depth */
+  padding: 20px;
+  width: 80%;
+  max-width: 1000px;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  transform-origin: center;
+  text-align: center;
+  color: #f0f0f0; /* Light text color */
+}
+
+
+.athlete-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6); /* More shadow on hover */
+}
+
+.athlete-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00bfa5; /* Accent color for image border */
+  box-shadow: 0 0 10px rgba(0, 191, 165, 0.5); /* Soft glow around the image */
+  transition: transform 0.3s ease;
+}
+
+.athlete-card img:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.athlete-details h2 {
+  font-size: 1.6rem;
+  margin: 15px 0;
+  color: #00bfa5; /* Match header accent color */
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.athlete-details p {
+  font-size: 1.2rem;
+  color: #008c72; /* A shade darker than accent */
+  margin: 5px 0;
+}
+
+.athlete-details span {
+  color: #100b0b; /* Light color for details */
+}
+
+.athlete-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.athlete-link:hover {
+  color: #008c72; /* Darker accent on hover */
+}
