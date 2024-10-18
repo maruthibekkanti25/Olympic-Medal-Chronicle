@@ -1,0 +1,222 @@
+:root {
+    --bg-color: #ed0a0a;
+    --container-bg: linear-gradient(135deg, #1e1e1e, #292929);
+    --text-color: #000000; 
+    --input-bg: #333;
+    --input-focus-bg: #444;
+    --header-bg: #007bff;
+    --header-text-color: #e0e0e0;
+    --btn-hover-bg: #0056b3;
+    --green: #28a745;
+    --red: #dc3545;
+    --gray: #6c757d;
+    --dark-row: #2b2b2b;
+    --hover-row: rgba(255, 255, 255, 0.1);
+    --modal-bg: #2b2b2b;
+    --modal-header-color: #007bff;
+    --modal-input-bg: #333;
+    --border-color: #444;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.leaderboard-container-modified {
+    background-color: var(--container-bg);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+    max-width: 1200px;
+    margin: auto;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.leaderboard-container-modified h2 {
+    text-align: center;
+    color: var(--header-bg);
+    margin-bottom: 20px;
+    font-size: 2em;
+    letter-spacing: 1px; /* Added for style */
+}
+
+.search-input-modified {
+    width: 50%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color:black;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left:600px;
+    /* Optional styles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+/* 
+.search-input-modified:focus {
+    background-color: var(--input-focus-bg);
+    outline: none;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+} */
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.leaderboard-table th {
+    background-color: var(--header-bg);
+    color: var(--header-text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.leaderboard-table tr:nth-child(even) {
+    background-color: var(--dark-row);
+}
+
+.leaderboard-table tr:hover {
+    background-color: var(--hover-row);
+    transform: translateY(-2px);
+}
+
+.leaderboard-table td {
+    color: var(--text-color);
+}
+
+.editbtn-modified,
+.deletebtn-modified,
+.submit-btn-modified,
+.cancel-btn-modified {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    font-weight: bold;
+}
+
+.editbtn-modified {
+    background-color: var(--green);
+    color: var(--text-color);
+}
+
+.deletebtn-modified {
+    background-color: var(--red);
+    color: var(--text-color);
+}
+
+.submit-btn-modified {
+    background-color: var(--header-bg);
+    color: var(--header-text-color);
+}
+
+.cancel-btn-modified {
+    background-color: var(--gray);
+    color: var(--text-color);
+}
+
+.editbtn-modified:hover,
+.deletebtn-modified:hover,
+.submit-btn-modified:hover,
+.cancel-btn-modified:hover {
+    background-color: var(--btn-hover-bg);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.modal-overlay-modified {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.modal-content-modified {
+    background-color: var(--modal-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+    width: 400px;
+    transform: translateY(-50px);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.modal-content-modified h3 {
+    color: var(--modal-header-color);
+    margin-bottom: 20px;
+}
+
+.modal-content-modified input {
+    width: 92%;
+    padding: 12px;
+    margin: 10px 0;
+    margin-left: 1%;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--modal-input-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s;
+}
+.modal-content-modified select{
+    width: 99%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin: 10px 0;
+    margin-left: 1%;
+    background-color: var(--modal-input-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s;
+}
+.modal-content-modified input:focus,
+.modal-content-modified select:focus {
+    background-color: var(--input-focus-bg);
+    outline: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

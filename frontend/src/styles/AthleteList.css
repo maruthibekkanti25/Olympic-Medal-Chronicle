@@ -1,0 +1,235 @@
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+}
+
+.athlete-list {
+  padding-top: 0.1px;
+  width: 97.8%;
+  margin-left: 20px;
+  text-align: center;
+  background: #2a2828;
+  border-radius: 10px;;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
+  /* backdrop-filter: blur(10px); */
+}
+
+.athlete-card {
+  background-color: #ffffff; /* Changed to white */
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  perspective: 1000px;
+  margin: 1rem 0; /* Added margin for spacing */
+  width: 50%;
+  margin-left: 26%;
+}
+
+.athlete-card:hover {
+  transform: translateY(-8px) rotateY(5deg) rotateX(2deg);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.rank-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #007bff;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.rank-number.top-3 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+}
+
+.search-input {
+  width: 50%;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.search-input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.athlete-image {
+  width: 30px; /* Smaller logo */
+  height: 30px; /* Smaller logo */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem; /* Adjusted for smaller logo */
+  border: 2px solid #007bff;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.athlete-card:hover .athlete-image {
+  transform: scale(1.1) rotate(10deg); /* Slightly less scaling */
+  filter: brightness(1.1);
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5);
+}
+
+.athlete-image::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #007bff;
+  border-radius: 50%;
+  z-index: -1;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.athlete-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  margin-left: 1.5rem; /* Spacing from flag and medal */
+}
+
+.athlete-details h2 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #333;
+  font-weight: 700;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.athlete-card:hover .athlete-details h2 {
+  color: #007bff;
+  text-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
+}
+
+ .athlete-details p {
+  margin: 0.3rem 0;
+  font-size: 1rem; /* Adjusted font size */
+  color: #555;
+}
+
+.athlete-details p span {
+  font-weight: 600;
+  color: #007bff;
+}
+
+.badge {
+  padding: 0.5rem 1rem; /* Smaller padding */
+  background-color: #007bff;
+  color: white;
+  border-radius: 15px;
+  font-size: 0.9rem; /* Smaller font size */
+  font-weight: 600;
+  margin-left: auto;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* For advanced styling */
+}
+
+.badge.gold {
+  background-color: #ffcc00;
+  color: #333;
+  transform: translateY(2px); /* Advanced styling */
+}
+
+.badge.silver {
+  background-color: #c0c0c0;
+  color: #333;
+  transform: translateY(2px); /* Advanced styling */
+}
+
+.badge.bronze {
+  background-color: #cd7f32;
+  color: #333;
+  transform: translateY(2px); /* Advanced styling */
+}
+
+.badge:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05); /* Hover effect */
+}
+
+.loading {
+  font-size: 2rem;
+  color: #007bff;
+  text-align: center;
+  margin-top: 5rem;
+  animation: pulse 1s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .athlete-container {
+      width: 100%;
+  }
+
+  .athlete-card {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+  }
+
+  .rank-number {
+      position: static;
+      margin-bottom: 1rem;
+  }
+
+  .badge {
+      margin-top: 1rem;
+  }
+
+  .search-input {
+      width: 80%;
+  }
+
+  .athlete-details h2 {
+      font-size: 1.4rem; /* Adjusted for smaller screens */
+  }
+
+  .athlete-details p {
+      font-size: 0.9rem; /* Adjusted for smaller screens */
+  }
+
+  .athlete-flag {
+      width: 20px; /* Adjusted size for the flag */
+      height: auto; /* Maintain aspect ratio */
+      margin-right: 1rem; /* Space between flag and name */
+  }
+
+  .athlete-medal {
+      width: 20px; /* Adjusted size for the medal */
+      height: auto; /* Maintain aspect ratio */
+      margin-right: 1rem; /* Space between medal and name */
+  }
+}

@@ -1,0 +1,118 @@
+.add-country-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.addCountrybtn {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.addCountrybtn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #439e52, #ce5050);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    transition: transform 0.3s;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content h3 {
+    color: #4caf50;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.modal-content input {
+    width: 93%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1em;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.modal-content select {
+    padding: 12px;
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1em;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+    background-color: #ffffff;
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.modal-content button[type="submit"] {
+    background-color: #2196f3;
+    color: #ffffff;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #1976d2;
+    transform: scale(1.05);
+}
+
+@media (max-width: 500px) {
+    .modal-content {
+        width: 90%;
+    }
+}

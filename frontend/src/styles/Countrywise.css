@@ -1,0 +1,119 @@
+.custom-leaderboard-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #0c8fed, #bbdefb);
+}
+
+.leaderboard-heading {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #194398;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(228, 4, 4, 0.985);
+}
+
+.country-search-input {
+    width: 50%;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    margin-left:200px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, #e1f5fe, #b3e5fc);
+    transition: background-color 0.1s ease;
+}
+
+.country-search-input:focus {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #337ab7;
+    animation: pulse 1s infinite;
+}
+
+.country-search-input::placeholder {
+    color: #666;
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.custom-leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, #ffffff, #f1f8e9);
+}
+
+.leaderboard-table th, .leaderboard-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease;
+    color: #333;
+}
+
+.leaderboard-table th {
+    background-color: #337ab7;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #337ab7;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.country-flag-image {
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    margin: 0 10px;
+    font-size: 22px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.leaderboard-table tr:hover {
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: scale-up 0.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}

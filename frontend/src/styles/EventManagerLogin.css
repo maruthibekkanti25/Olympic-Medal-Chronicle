@@ -1,0 +1,84 @@
+.event-manager-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover; /* Ensure the background image covers the full viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Avoid repeating the background */
+    width: 97.8%;
+    margin-left: 20px;
+  }
+  
+  .form-container {
+    background: linear-gradient(
+      135deg,
+      rgba(15, 69, 203, 0.85),  /* Starting color */
+      rgba(255, 105, 180, 0.85) /* Ending color */
+    );
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.922);
+    width: 350px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Title styles */
+  .title {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  /* Label styles */
+  .label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: white;
+  }
+  
+  /* Input field styles */
+  .input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 0.922);
+  }
+  
+  /* Button styles */
+  .button {
+    padding: 12px;
+    background-color: #1888ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+  }
+  
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  

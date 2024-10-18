@@ -1,0 +1,126 @@
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: -40px;
+    margin-left: 40px;
+    width: 95.7%;
+    /* Ensures the footer can adapt well within its container */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex-basis: 22%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #e58080;
+}
+
+.footer-section .social-links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+}
+
+.subscribe-input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #111;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.subscribe-btn:hover {
+    background-color: #e58080;
+    color: #fff;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        flex-basis: 100%;
+        text-align: center; /* Center align text in footer sections on small screens */
+    }
+
+    .subscribe-input {
+        width: 100%; /* Full width for subscribe input on mobile */
+    }
+
+    .social-links {
+        justify-content: center; /* Center social links on mobile */
+    }
+}
